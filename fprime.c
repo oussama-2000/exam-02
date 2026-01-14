@@ -8,7 +8,7 @@ int main(int ac, char **av)
         int n = atoi(av[1]);
         if(n == 1)
         {
-            printf("%d\n",2);
+            printf("%d\n",1);
             return 0;
         }
         int div = 1;
