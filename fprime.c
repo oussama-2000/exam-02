@@ -1,31 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 int main(int ac, char **av)
 {
-    int n, i = 2;
-
-    if (ac == 2 )
+    if(ac == 2)
     {
-        n = atoi(av[1]);
-        if (n == 1)
+        int n = atoi(av[1]);
+        if(n == 1)
         {
-            printf("1/n");
+            printf("%d\n",2);
             return 0;
         }
-        while (n > 1)
+        int div = 1;
+        while(n > div++)
         {
-            if (n % i == 0)
+            if(n % div == 0)
             {
-                printf("%d", i);
-                if (n != i)
+                printf("%d",div);
+                if(div != n)
                     printf("*");
-                n = n / i;
+                n /= div;
+                div = 1;
             }
-            else
-                i++;
         }
     }
     printf("\n");
-    return 0;
-}
